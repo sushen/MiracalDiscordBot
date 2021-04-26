@@ -2,14 +2,13 @@ import discord
 import time
 import asyncio
 
-messages = joined = 0
 
+messages = joined = 0
 
 def read_token():
     with open("token", "r") as f:
         lines = f.readlines()
         return lines[0].strip()
-
 
 token = read_token()
 
@@ -62,7 +61,7 @@ async def on_message(message):
 
     id = client.get_guild(836044973778141254)
     channels = ["commands"]
-    valid_users = ["Tim#9298"]
+    valid_users = ["sushen#7200"]
     bad_words = ["bad", "stop", "45"]
 
     for word in bad_words:
