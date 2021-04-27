@@ -6,13 +6,13 @@ import os
 messages = joined = 0
 
 
-def read_token():
-    with open("token", "r") as f:
-        lines = f.readlines()
-        return lines[0].strip()
-
-
-token = read_token()
+# def read_token():
+#     with open("token", "r") as f:
+#         lines = f.readlines()
+#         return lines[0].strip()
+#
+#
+# token = read_token()
 
 client = discord.Client()
 
