@@ -1,14 +1,16 @@
 import discord
 import time
 import asyncio
-
+import os
 
 messages = joined = 0
+
 
 def read_token():
     with open("token", "r") as f:
         lines = f.readlines()
         return lines[0].strip()
+
 
 token = read_token()
 
@@ -83,4 +85,8 @@ async def on_message(message):
 
 
 client.loop.create_task(update_stats())
-client.run(token)
+# this is for local Machine
+# client.run(token)
+
+# this is for heroku hosting
+client.run(os.environ["token"])
