@@ -62,8 +62,8 @@ async def on_message(message):
     messages += 1
 
     id = client.get_guild(836044973778141254)
-    channels = ["commands"]
-    valid_users = ["sushen#7200"]
+    channels = ["commands", "general"]
+    #valid_users = ["sushen#7200"]
     bad_words = ["bad", "stop", "45"]
 
     for word in bad_words:
@@ -77,7 +77,7 @@ async def on_message(message):
         embed.add_field(name="!users", value="Prints number of users")
         await message.channel.send(content=None, embed=embed)
 
-    if str(message.channel) in channels and str(message.author) in valid_users:
+    if str(message.channel) in channels: #and str(message.author) in valid_users:
         if message.content.find("!hello") != -1:
             await message.channel.send("Hi")
         elif message.content == "!users":
